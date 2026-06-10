@@ -135,32 +135,74 @@
   color: var(--bg-color);
 }
 
-@media (max-width: 768px) {
-  .profile-header h1 {
-    font-size: 2rem;
+@keyframes text-glitch {
+  0% {
+    text-shadow:
+      2px 0 var(--accent-color),
+      -2px 0 rgba(0, 255, 255, 0.5);
+    transform: translate(-1px, 1px) skewX(1deg);
   }
-
-  .bio {
-    font-size: 0.95rem;
-    text-align: left;
-    padding-left: 10px;
+  20% {
+    text-shadow:
+      -2px 0 var(--accent-color),
+      2px 0 rgba(0, 255, 255, 0.5);
+    transform: translate(1px, -1px) skewX(-1deg);
   }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  40% {
+    text-shadow:
+      2px 0 var(--accent-color),
+      -1px 0 rgba(0, 255, 255, 0.5);
+    transform: translate(-1px, -1px) skewX(2deg);
   }
-
-  .project-card {
-    padding: 15px;
-    box-shadow: 4px 4px 0px #000000;
+  60% {
+    text-shadow:
+      -1px 0 var(--accent-color),
+      2px 0 rgba(0, 255, 255, 0.5);
+    transform: translate(1px, 1px) skewX(-2deg);
   }
-
-  .project-card:hover {
-    box-shadow: 5px 5px 0px var(--accent-color);
+  80% {
+    text-shadow:
+      1px 0 var(--accent-color),
+      -2px 0 rgba(0, 255, 255, 0.5);
+    transform: translate(-1px, 0) skewX(1deg);
   }
+  100% {
+    text-shadow: 0 0 transparent;
+    transform: translate(0) skewX(0);
+  }
+}
 
-  .project-title {
-    font-size: 1.1rem;
+.project-card:hover .project-title {
+  animation: text-glitch 0.3s infinite linear alternate-reverse;
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    .profile-header h1 {
+      font-size: 2rem;
+    }
+
+    .bio {
+      font-size: 0.95rem;
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .project-card {
+      padding: 15px;
+      box-shadow: 4px 4px 0px #000000;
+    }
+
+    .project-card:hover {
+      box-shadow: 5px 5px 0px var(--accent-color);
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+    }
   }
 }
