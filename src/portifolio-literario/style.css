@@ -1,3 +1,10 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
 .project-card {
   background-color: var(--btn-bg);
   border-radius: 10px;
@@ -6,6 +13,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 2px solid transparent;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -13,27 +22,47 @@
   transform: translateY(-2px);
 }
 
-.project-card h3 {
-  margin: 0 0 10px 0;
+.project-title {
+  margin: 0 0 15px 0;
   color: var(--title-color);
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
-.project-card p {
+.project-synopsis {
   margin: 0 0 15px 0;
   font-size: 0.9rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text-color);
+  flex-grow: 1;
+}
+
+.project-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.project-details li {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.project-details strong {
+  color: var(--title-color);
 }
 
 .tags {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  margin-top: auto;
 }
 
-.tags span {
+.tag {
   background-color: rgba(122, 162, 247, 0.1);
   color: var(--btn-hover-text);
   padding: 4px 8px;
@@ -47,4 +76,14 @@
   padding: 10px 15px;
   font-size: 0.9rem;
   text-align: center;
+  border-radius: 6px;
+  color: var(--text-color);
+  text-decoration: none;
+  margin-top: 15px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.project-btn:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
