@@ -40,12 +40,12 @@ const dadosPortfolio = {
   ],
   projetosEmAndamento: [
     {
-      titulo: "Kernel Panic (Título Provisório)",
-      formato: "Romance / Noveleta",
-      status: "2º Rascunho (Revisão Estrutural)",
+      titulo: "Amaldiçoado (Título Provisório)",
+      formato: "Romance",
+      status: " Em desenvolvimento (30%).",
       sinopse:
-        "Um thriller de cyber-horror que acompanha uma engenheira de software em Curitiba que descobre um trecho de código ofuscado rodando nos servidores da empresa, emulando a consciência de funcionários falecidos.",
-      tags: ["Ficção Científica", "Cyber-horror", "Terror Psicológico"],
+        " Um desenvolvedor atormentado pelo luto, cooptado para um projeto obscuro, vê-se em um dilema moral diante de um conhecimento tecnológico capaz de modificar até os parâmetros mais profundos da realidade. Entre a culpa e o desejo visceral de recuperar o que foi perdido, a narrativa mergulha em um fluxo de consciência solitário e obsessivo, onde o horror sci-fi se funde à fragilidade da sanidade humana nas ruas cinzentas de uma metrópole indiferente.",
+      tags: ["Ficção Científica", "Cyber-horror", "Terror/Horror Psicológico"],
     },
   ],
 };
