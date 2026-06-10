@@ -1,0 +1,50 @@
+.project-card {
+  background-color: var(--btn-bg);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: var(--btn-hover-border);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  margin: 0 0 10px 0;
+  color: var(--title-color);
+  font-size: 1.1rem;
+}
+
+.project-card p {
+  margin: 0 0 15px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tags span {
+  background-color: rgba(122, 162, 247, 0.1);
+  color: var(--btn-hover-text);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.project-btn {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
