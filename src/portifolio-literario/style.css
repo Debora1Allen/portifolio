@@ -1,3 +1,25 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.bio {
+  text-align: left;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 15px auto 0;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -86,4 +108,27 @@
 
 .project-btn:hover {
   background-color: rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 768px) {
+  .profile-header h1 {
+    font-size: 2rem;
+  }
+
+  .bio {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
 }
