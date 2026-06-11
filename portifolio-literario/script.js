@@ -5,7 +5,7 @@ const dadosPortfolio = {
       sinopse:
         "Nem tudo é o que parece ser e nem sempre o que é, é totalmente o que diz ser... Um espírito atormentado caminha entre nós vestindo uma capa de pele e carne, carregando um rosto comum que vira do avesso após uma descoberta maldita. Aviso: Tenha certeza de que será capaz de olhar no espelho depois e ainda continuar vendo seu próprio reflexo.",
       tags: ["Terror", "Horror", "Realismo Fantástico"],
-      link: "/home/deadalien/portifolio/livros/livros.html",
+      link: "../livros/livros.html",
     },
   ],
   participacoes: [
