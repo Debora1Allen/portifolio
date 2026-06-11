@@ -1,0 +1,44 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--title-color);
+}
+
+.input-group input,
+.input-group textarea {
+  background-color: var(--btn-bg);
+  border: 1px solid transparent;
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  padding: 12px;
+  border-radius: 0;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  border-color: var(--btn-hover-border);
+}
+
+.submit-btn {
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
