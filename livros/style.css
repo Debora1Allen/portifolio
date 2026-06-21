@@ -15,101 +15,17 @@
   height: 100%;
   border: none;
 }
-
-/* --- CONFIGURAÇÃO DO FUNDO (BODY) --- */
 body {
-  /* 
-    O "linear-gradient" abaixo cria uma camada escura em cima da sua imagem.
-    Começa com um preto levemente avermelhado e termina num preto profundo.
-    Isso é crucial para a legibilidade dos botões e para o clima "assustador".
-  */
   background-image:
     linear-gradient(to bottom, rgba(20, 5, 5, 0.8), rgba(0, 0, 0, 0.95)),
-    url("/assets/bucu.jpeg"); /* <-- COLOQUE O NOME DO ARQUIVO DA SUA CAPA AQUI */
-
+    url("/assets/bucu.jpeg"); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* O fundo fica parado enquanto a tela rola */
-
-  color: #ffffff; /* Texto branco para destacar no fundo escuro */
-  font-family: "Inter", sans-serif;
+  background-attachment: fixed;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
-
-/* --- CAIXA PRINCIPAL (ELEGANTE E MISTERIOSA) --- */
-.container {
-  width: 100%;
-  max-width: 500px;
-  padding: 40px 20px;
-
-  /* Efeito "Glassmorphism" (Vidro esfumaçado) */
-  background: rgba(15, 0, 0, 0.4); /* Fundo preto/vermelho muito sutil */
-  backdrop-filter: blur(
-    10px
-  ); /* Deixa a imagem de fundo embaçada atrás da caixa */
-  -webkit-backdrop-filter: blur(10px); /* Para funcionar no Safari */
-
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Borda muito fina e elegante */
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8); /* Sombra pesada para destacar do fundo */
-
-  text-align: center;
-}
-
-/* --- TÍTULO --- */
-h1 {
-  font-weight: 700;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-  /* Brilho vermelho escuro sutil atrás do texto */
-  text-shadow: 0 4px 15px rgba(180, 0, 0, 0.6);
-}
-
-/* --- BOTÕES DOS LINKS --- */
-.link-btn {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 8px;
-
-  /* Estilo inicial do botão: semi-transparente com borda sutil */
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #eaeaea;
-  border: 1px solid rgba(139, 0, 0, 0.3); /* Borda vermelho-sangue bem fraca */
-
-  transition: all 0.3s ease; /* Animação suave */
-}
-
-/* Efeito ao passar o mouse por cima do botão */
-.link-btn:hover {
-  background-color: rgba(139, 0, 0, 0.8); /* Fica vermelho escuro */
-  border-color: rgba(255, 0, 0, 0.5);
-  color: #ffffff;
-  box-shadow: 0 0 20px rgba(139, 0, 0, 0.5); /* Brilho vermelho "assustador" */
-  transform: translateY(-2px); /* Botão sobe um pouquinho */
-}
-
-/* Botão de voltar ligeiramente diferente */
-.back-btn {
-  margin-top: 30px;
-  background-color: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.9em;
-}
-
-.back-btn:hover {
-  background-color: transparent;
-  color: #fff;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-  box-shadow: none;
-  transform: none;
 }
