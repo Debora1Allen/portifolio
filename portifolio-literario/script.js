@@ -3,7 +3,7 @@ const dadosPortfolio = {
     {
       titulo: "Canibal Apaixonado",
       sinopse:
-        "Nem tudo é o que parece ser e nem sempre o que é, é totalmente o que diz ser... Um espírito atormentado caminha entre nós vestindo uma capa de pele e carne, carregando um rosto comum que vira do avesso após uma descoberta maldita. Aviso: Tenha certeza de que será capaz de olhar no espelho depois e ainda continuar vendo seu próprio reflexo.",
+        "Ele não queria ser um monstro, queria ser outra pessoa Professor de crianças, vida morna, solidão de apartamento. Numa noite de show de rock, ele sente uma pulsão que não reconhece e a primeira mordida muda tudo. Agora ele mata. Ele come. Ele coleciona dentro de si as pessoas que gostaria de ter sido. Canibal Apaixonado é um romance de terror psicológico sobre um homem que confunde amor com devoração, e que no fundo só quer deixar de ser quem é, mesmo que precise destruir os outros para isso.",
       tags: ["Terror", "Horror", "Realismo Fantástico"],
       link: "../livros/livros.html",
     },
