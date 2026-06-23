@@ -7,10 +7,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        assombracoes: "/pages/leia-assombracoes/index.html",
-        literario: "/pages/portifolio-literario/index.html",
-        contato: "/pages/contato/index.html",
-        livros: "/pages/livros/index.html",
+        assombracoes: resolve(__dirname, "/pages/leia-assombracoes/index.html"),
+        literario:  resolve(__dirname,"/pages/portifolio-literario/index.html"),
+        contato:  resolve(__dirname,"/pages/contato/index.html"),
+        livros:  resolve(__dirname,"/pages/livros/index.html"),
       },
     },
   },
