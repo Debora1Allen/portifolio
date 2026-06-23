@@ -14,16 +14,19 @@ body {
   font-family: var(--font-text);
   background-color: var(--bg-color);
   color: var(--text-color);
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home-layout {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
   padding: 20px;
-  box-sizing: border-box;
 }
 
-.container {
+.home-container {
   text-align: center;
   width: 100%;
   max-width: 450px;
