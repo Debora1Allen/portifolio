@@ -1,5 +1,3 @@
-import "./global.css";
-
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("contextmenu", (evento) => {
     evento.preventDefault();
