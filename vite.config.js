@@ -6,10 +6,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: "index.html",
-        assombracoes: "assombracoes.html",
-        literario: "literario.html",
-        contato: "contato.html",
-        livros: "livros.html",
+        assombracoes: "/leia-assombracoes/assombracoes.html",
+        literario: "/portifolio-literario/literario.html",
+        contato: "/contato/contato.html",
+        livros: "/livros/livros.html",
       },
     },
   },
