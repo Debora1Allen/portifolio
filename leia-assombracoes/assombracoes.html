@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dead Alien - Arquivo Literário</title>
+    <link rel="stylesheet" href="/global.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="blog-header">
+      <a href="../index.html" class="back-btn">&lt; Voltar à Base</a>
+      <h1 class="glitch-title">Arquivo Literário</h1>
+      <p class="bio">Registros, contos e anomalias documentadas.</p>
+    </header>
+
+    <main class="blog-container">
+      <nav class="filters">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="horror-cosmico">
+          Horror Cósmico
+        </button>
+        <button class="filter-btn" data-filter="slasher">Slasher</button>
+        <button class="filter-btn" data-filter="sci-fi">Sci-Fi Dark</button>
+      </nav>
+
+      <section class="post-grid" id="post-grid"></section>
+    </main>
+    <div id="reader-modal" class="modal-overlay" hidden>
+      <div class="modal-box">
+        <div class="modal-controls">
+          <button id="mute-btn" class="sys-btn">[ ÁUDIO: LIGADO ]</button>
+          <button id="close-modal" class="sys-btn">[X] FECHAR ARQUIVO</button>
+        </div>
+
+        <div class="modal-header">
+          <div id="modal-meta" class="post-meta"></div>
+          <h2 id="modal-title" class="post-title glitch-title"></h2>
+        </div>
+
+        <div id="modal-body" class="modal-body-content"></div>
+      </div>
+    </div>
+    <script src="/global.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

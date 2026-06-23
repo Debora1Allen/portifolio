@@ -1,0 +1,32 @@
+{
+  "name": "portifolio",
+  "version": "1.0.0",
+  "description": "> \"Registros, contos e anomalias documentadas.\"",
+  "main": "global.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debora1Allen/portifolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Debora1Allen/portifolio/issues"
+  },
+  "homepage": "https://github.com/Debora1Allen/portifolio#readme",
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "vite": "^8.0.16"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2"
+  }
+}

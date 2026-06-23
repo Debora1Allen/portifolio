@@ -1,0 +1,308 @@
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #d1d1d1;
+  --title-color: #ffffff;
+  --accent-color: #8a1c1c;
+  --btn-bg: #121212;
+  --border-color: #333333;
+
+  --font-text: "Inter", sans-serif;
+  --font-code: "Courier New", Courier, monospace;
+}
+
+body {
+  font-family: var(--font-text);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.blog-header {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  font-weight: bold;
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.back-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--title-color);
+}
+
+.glitch-title {
+  margin: 40px 0 10px 0;
+  color: var(--title-color);
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: var(--font-code);
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  text-shadow:
+    2px 0px 0px rgba(138, 28, 28, 0.9),
+    -2px 0px 0px rgba(0, 255, 255, 0.4);
+}
+
+.bio {
+  font-size: 0.9rem;
+  font-family: var(--font-code);
+  color: var(--text-color);
+}
+
+.blog-container {
+  width: 100%;
+  max-width: 800px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-btn {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 3px 3px 0px #000;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--accent-color);
+  color: var(--title-color);
+  border-color: var(--accent-color);
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000;
+}
+
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.post-card {
+  background-color: var(--btn-bg);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.post-card:hover {
+  border-color: var(--accent-color);
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0px var(--accent-color);
+}
+
+.post-meta {
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.post-title {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  color: var(--title-color);
+  font-family: var(--font-code);
+  letter-spacing: -1px;
+}
+
+.post-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.read-btn {
+  align-self: flex-start;
+  color: var(--bg-color);
+  background-color: var(--text-color);
+  text-decoration: none;
+  padding: 10px 15px;
+  font-family: var(--font-code);
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border: 1px solid var(--text-color);
+  transition: all 0.2s ease;
+}
+
+.post-card:hover .read-btn {
+  background-color: var(--accent-color);
+  color: var(--title-color);
+  border-color: var(--accent-color);
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-box {
+  background-color: var(--bg-color);
+  border: 1px solid var(--accent-color);
+  box-shadow: 12px 12px 0px #000000;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  animation: glitch-open 0.3s ease-out forwards;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Padrão */
+}
+
+.texto-poesia {
+  white-space: pre-line;
+  font-family: var(--font-code);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  padding: 10px 20px;
+  border-left: 2px solid var(--accent-color);
+  background-color: rgba(18, 18, 18, 0.5);
+  margin: 0 auto 20px auto;
+  max-width: 600px;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Padrão */
+}
+
+@keyframes glitch-open {
+  0% {
+    transform: scale(0.98);
+    opacity: 0;
+    filter: contrast(150%) hue-rotate(90deg);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: contrast(120%) hue-rotate(-90deg);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: none;
+  }
+}
+.modal-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 15px 15px 0 15px;
+  background-color: var(--bg-color);
+}
+
+.sys-btn {
+  background-color: var(--bg-color);
+  color: var(--accent-color);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-code);
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px #000;
+}
+
+.sys-btn:hover {
+  background-color: var(--accent-color);
+  color: var(--title-color);
+  border-color: var(--accent-color);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.sys-btn.muted {
+  color: #555;
+  border-color: #555;
+  text-decoration: line-through;
+}
+
+.modal-header {
+  padding: 10px 30px 10px 30px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.modal-body-content {
+  padding: 20px 30px 30px 30px;
+  overflow-y: auto;
+  font-family: var(--font-code);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+}
+
+.modal-body-content p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .back-btn {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  .glitch-title {
+    margin-top: 10px;
+  }
+}
