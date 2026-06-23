@@ -17,7 +17,13 @@ textarea,
 }
 
 @media print {
-  body {
+  *,
+  *::before,
+  *::after {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    color: transparent !important;
   }
 }

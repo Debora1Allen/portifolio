@@ -202,10 +202,6 @@ body {
   flex-direction: column;
   position: relative;
   animation: glitch-open 0.3s ease-out forwards;
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge */
-  user-select: none; /* Padrão */
 }
 
 .texto-poesia {
@@ -219,11 +215,6 @@ body {
   background-color: rgba(18, 18, 18, 0.5);
   margin: 0 auto 20px auto;
   max-width: 600px;
-
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge */
-  user-select: none; /* Padrão */
 }
 
 @keyframes glitch-open {
