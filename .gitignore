@@ -1,2 +1,4 @@
 assets/
 .env
+dist/
+node_modules

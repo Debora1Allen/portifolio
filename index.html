@@ -16,6 +16,23 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      @media print {
+        html,
+        body,
+        #reader-modal,
+        .modal-overlay,
+        .modal-box,
+        .modal-body-content,
+        * {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          background: transparent !important;
+          color: transparent !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <main class="container">
@@ -70,7 +87,7 @@
           >Contato</a
         >
       </div>
-      <script src="global.js"></script>
+      <script type="module" src="global.js"></script>
     </main>
   </body>
 </html>

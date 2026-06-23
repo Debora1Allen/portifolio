@@ -6,6 +6,23 @@
     <title>Dead Alien - Arquivo Literário</title>
     <link rel="stylesheet" href="/global.css" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @media print {
+        html,
+        body,
+        #reader-modal,
+        .modal-overlay,
+        .modal-box,
+        .modal-body-content,
+        * {
+          display: none !important;
+          visibility: hidden !important;
+          opacity: 0 !important;
+          background: transparent !important;
+          color: transparent !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="blog-header">
@@ -41,7 +58,7 @@
         <div id="modal-body" class="modal-body-content"></div>
       </div>
     </div>
-    <script src="/global.js"></script>
+    <script type="module" src="/global.js"></script>
     <script type="module" src="script.js"></script>
   </body>
 </html>
