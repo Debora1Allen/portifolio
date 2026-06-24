@@ -27,3 +27,25 @@ textarea,
     color: transparent !important;
   }
 }
+@keyframes glitch-load {
+  0% {
+    opacity: 0;
+    transform: translateY(15px) skewX(10deg);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(-5px) skewX(-5deg);
+  }
+  66% {
+    opacity: 1;
+    transform: translateY(2px) skewX(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) skewX(0);
+  }
+}
+
+body {
+  animation: glitch-load 0.25s steps(4, end) forwards;
+}
